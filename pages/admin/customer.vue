@@ -36,7 +36,7 @@
             type="text"
             name="search"
             class="form-control"
-            placeholder="Search customers... (Filter by : email address, phone numbers, first name, last name)"
+            placeholder="Search customers... ( Filter by : email address, phone numbers, first name, last name )"
             style="width: 80%;"
           />
           <div class="btn-toolbar">
@@ -277,7 +277,7 @@ export default {
         await this.$axios
           .post("api/customer", this.form)
           .then(response => {
-            if (response.status === 200) {
+            if (response.status === 201) {
               this.fetchCustomers();
               this.form.first_name = "";
               this.form.last_name = "";

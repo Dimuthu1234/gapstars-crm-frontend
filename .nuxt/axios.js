@@ -147,28 +147,21 @@ export default (ctx, inject) => {
   // baseURL
   const baseURL = process.browser
       ? '/'
-      : (process.env._AXIOS_BASE_URL_ || '')
+      : (process.env._AXIOS_BASE_URL_ || 'http://localhost:3000/')
 
   // Create fresh objects for all default header scopes
   // Axios creates only one which is shared across SSR requests!
   // https://github.com/mzabriskie/axios/blob/master/lib/defaults.js
   const headers = {
     "common": {
-        "Accept": "application/vnd.api+json",
-        "content-type": "application/vnd.api+json"
+        "Accept": "application/json, text/plain, */*"
     },
-    "delete": {
-        "content-type": "application/vnd.api+json"
-    },
+    "delete": {},
     "get": {},
     "head": {},
-    "post": {
-        "content-type": "application/vnd.api+json"
-    },
+    "post": {},
     "put": {},
-    "patch": {
-        "content-type": "application/vnd.api+json"
-    }
+    "patch": {}
 }
 
   const axiosOptions = {

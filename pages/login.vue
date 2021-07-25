@@ -77,8 +77,8 @@ export default {
   data() {
     return {
       form: {
-        email: "abraham.fahey@example.org",
-        password: "password"
+        email: "jayalathdimuthu@gmail.com",
+        password: "12345678"
       }
     };
   },

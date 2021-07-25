@@ -195,6 +195,18 @@ export default {
             if (response.status === 200) {
               this.fetchCustomers();
               this.$refs["customer-modal-edit"].hide();
+
+              this.form.first_name = "";
+              this.form.last_name = "";
+              this.form.email = "";
+              this.form.phone_numbers = [
+                {
+                  id: "number0",
+                  label: "Enter phone number",
+                  value: ""
+                }
+              ];
+
               this.$toast.success("Customer updated successfully!...");
             } else {
               this.$toast.error("Invalid data!...");

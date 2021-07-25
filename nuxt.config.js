@@ -68,22 +68,7 @@ export default {
    */
   axios: {
     proxy: true,
-    baseURL: process.env.API_BASE_URL,
-    headers: {
-      common: {
-        Accept: "application/vnd.api+json",
-        "content-type": "application/vnd.api+json"
-      },
-      post: {
-        "content-type": "application/vnd.api+json"
-      },
-      patch: {
-        "content-type": "application/vnd.api+json"
-      },
-      delete: {
-        "content-type": "application/vnd.api+json"
-      }
-    },
+    setBaseURL: "http://localhost:8000",
     credentials: true
   },
 
